@@ -21,7 +21,7 @@ def parse_int(s, start):
 
 def parse_string(s, start):
     end = start + 1
-    while end < len(s) and not s[end].isdigit(): # only works because there are no string chars directly after number
+    while end < len(s) and not s[end].isdigit(): # no string chars directly after number, only brackets
         end += 1
     return (s[start:end], end)
 
@@ -36,7 +36,7 @@ def get_bracket_contents(s, start):
             bracket_stack.pop()
 
         if len(bracket_stack) == 0:
-            return contents[1:] #don't include leading bracket
+            return contents[1:] # don't include leading bracket
         else:
             contents += char
 
