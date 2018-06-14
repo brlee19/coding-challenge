@@ -13,7 +13,7 @@ def sort_by_strings(s,t):
     for char in t:
         if char in s_occurences:
             sorted_str += char * s_occurences[char]
-            # problem set does not say that all chars in s must be in t
+            # problem description does not explicitly specify that all chars in s must be in t
             # if not all chars in s are in t, I would delete these keys from s_occurences here
             # del s_occurences[char]
 
